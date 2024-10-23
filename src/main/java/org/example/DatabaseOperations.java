@@ -1,35 +1,35 @@
-package org.example;
+/*package org.example;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DatabaseOperations {
 
     public static void create() {
-        try {
-            // Conectar ao banco de dados
-            Connection connection = connect();
+        String url = "jdbc:mysql://localhost:3306/library"; // URL do banco de dados
+        String user = "root"; // Usuário do banco de dados
+        String password = ""; // Senha do banco de dados
 
-            // Obter os catálogos de banco de dados existentes
+        try (Connection connection = DriverManager.getConnection(url, user, password);
+             Statement stmt = connection.createStatement()) {
+
+            // Verifica se o banco de dados já existe
             ResultSet resultSet = connection.getMetaData().getCatalogs();
-
-            // Iterar sobre cada catálogo no ResultSet
             while (resultSet.next()) {
                 String databaseName = resultSet.getString(1); // Nome do banco de dados na posição 1
                 if (databaseName.equals("library")) {
-                    Statement stmt = connection.createStatement();
                     // Drop do banco de dados se já existir
-                    String sql = "DROP DATABASE library";
-                    stmt.executeUpdate(sql);
+                    stmt.executeUpdate("DROP DATABASE library");
+                    break; // Sai do loop se o banco de dados for encontrado e removido
                 }
             }
+            resultSet.close(); // Fechar ResultSet após uso
 
             // Criar um novo banco de dados "library"
-            Statement stmt = connection.createStatement();
-            String sql = "CREATE DATABASE library";
-            stmt.executeUpdate(sql);
-            stmt.executeUpdate("USE library"); // Usar o banco de dados
+            stmt.executeUpdate("CREATE DATABASE library");
 
             // Criar a tabela "USERS"
             String createUserTable = "CREATE TABLE USERS(" +
@@ -71,16 +71,15 @@ public class DatabaseOperations {
                     "('The Wicked King', 'Fiction', 350)";
             stmt.executeUpdate(insertBooks);
 
-            // Fechar o ResultSet
-            resultSet.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println("Banco de dados e tabelas criados com sucesso!");
+
+        } catch (SQLException e) {
+            e.printStackTrace(); // Exibe qualquer erro que ocorrer
         }
     }
 
-    // Método connect() assumido já implementado
     public static Connection connect() {
-        // Implementação do método connect() conforme o código anterior
-        return null;
+        // Aqui você pode incluir a implementação do método connect() se necessário
+        return null; // Remova ou implemente conforme necessário
     }
-}
+}*/

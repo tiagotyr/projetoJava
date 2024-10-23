@@ -2,6 +2,9 @@
   <artifact type="jar" name="projetoJava:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/projetoJava_jar</output-path>
     <root id="archive" name="projetoJava.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Meus Documentos/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="projetoJava" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/rs2xml.jar" path-in-jar="/" />
     </root>
