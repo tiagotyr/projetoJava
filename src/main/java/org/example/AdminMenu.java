@@ -13,7 +13,7 @@ public class AdminMenu {
         JFrame f = new JFrame("Funções de Administrador");
 
         JButton create_but = new JButton("Resetar Dados");
-        create_but.setBounds(450, 60, 120, 25);
+        create_but.setBounds(280, 60, 160, 25);
         create_but.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 db.resetDatabase(); // Chame o método para criar ou resetar o banco
