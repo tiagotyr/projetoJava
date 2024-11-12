@@ -15,7 +15,7 @@ public class SimulatedDatabase {
         users.add(new User("Emanuelly", "2701", false));
         users.add(new User("Nicolly", "3276", false));
         users.add(new User("Wesley", "3276", false));
-        books.add(new Book("Harry Potter:Relíquias da Morte","Fantasia",59.8));
+        books.add(new Book("Harry Potter:Relíquias da Morte","Fantasia",59.9));
         books.add(new Book("O Conde de Monte Cristo","Aventura",85.9));
         books.add(new Book("O Pequeno Príncipe","Fantasia",49.9));
         books.add(new Book("Dom Casmurro","Romance",29.9));
