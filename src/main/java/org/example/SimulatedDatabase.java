@@ -9,13 +9,21 @@ public class SimulatedDatabase {
     private List<IssuedBook> issuedBooks = new ArrayList<>();
 
     public SimulatedDatabase() {
-        // Adicionando alguns usuários iniciais
         users.add(new User("admin", "admin", true));
         users.add(new User("Tiago", "3276", false));
         users.add(new User("Lucas", "1696", false));
         users.add(new User("Emanuelly", "2701", false));
         users.add(new User("Nicolly", "3276", false));
         users.add(new User("Wesley", "3276", false));
+        books.add(new Book("Harry Potter:Relíquias da Morte","Fantasia",59.9));
+        books.add(new Book("O Conde de Monte Cristo","Aventura",35.90));
+        books.add(new Book("O Pequeno Príncipe","Fantasia",49.90));
+        books.add(new Book("Dom Casmurro","Romance",29.90));
+        books.add(new Book("A Hora da Estrela","Drama",28.00));
+        books.add(new Book("Orgulho e Preconceito","Romance",49.90));
+        books.add(new Book("Os Miseráveis","Romance",39.90));
+        books.add(new Book("O Rei Lear","Tragedia",29.90));
+        books.add(new Book("Romeu e Julieta","Tragedia",59.90));
     }
 
 
