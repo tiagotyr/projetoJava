@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SimulatedDatabase {
-    private List<User> users = new ArrayList<>();
-    private List<Book> books = new ArrayList<>();
-    private List<IssuedBook> issuedBooks = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
+    private final List<Book> books = new ArrayList<>();
+    private final List<IssuedBook> issuedBooks = new ArrayList<>();
 
     public SimulatedDatabase() {
         users.add(new User("admin", "admin", true));
