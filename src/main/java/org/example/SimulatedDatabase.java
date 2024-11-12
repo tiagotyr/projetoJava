@@ -12,6 +12,10 @@ public class SimulatedDatabase {
         // Adicionando alguns usuários iniciais
         users.add(new User("admin", "admin", true));
         users.add(new User("Tiago", "3276", false));
+        users.add(new User("Lucas", "1696", false));
+        users.add(new User("Emanuelly", "2701", false));
+        users.add(new User("Nicolly", "3276", false));
+        users.add(new User("Wesley", "3276", false));
     }
 
 
