@@ -23,7 +23,7 @@ public class SimulatedDatabase {
         books.add(new Book("Orgulho e Preconceito","Romance",49.9));
         books.add(new Book("Os Miseráveis","Romance",39.9));
         books.add(new Book("O Rei Lear","Tragedia",29.9));
-        books.add(new Book("Romeu e Julieta","Tragedia",59.9));
+        books.add(new Book("Romeu e Julieta","Tragedia",59.90));
     }
 
 
